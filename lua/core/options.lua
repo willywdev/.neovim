@@ -16,7 +16,7 @@ vim.o.splitbelow = true             -- Horizontal splits below
 vim.o.splitright = true             -- Vertical splits to the right
 vim.o.showtabline = 2               -- Always show tab line
 vim.o.updatetime = 250              -- Faster updates
-vim.o.timeoutlen = 300              -- Key mapping timeout
+vim.o.timeoutlen = 500              -- Key mapping timeout
 vim.o.smartindent = true            -- Smart auto-indentation
 vim.o.undofile = true               -- Save undo history
 vim.o.backup = false                -- Disable backup files
@@ -38,4 +38,9 @@ vim.o.syntax = 'on'                 -- Enable syntax highlighting
 vim.o.colorcolumn = '80'            -- Highlight 80th column
 vim.o.showcmd = true                -- Show command in status line
 vim.o.cursorline = false -- Highlight current line
+vim.opt.fileformats = {} -- Ignore file endings
 
+-- Restore Neovim's ability to detect different line endings
+vim.opt.fileformats = { "unix", "dos" }  -- unix for LF, dos for CRLF
+-- Ensure new files default to LF line endings
+vim.opt.fileformat = "unix"  -- Default to LF when writing new files
