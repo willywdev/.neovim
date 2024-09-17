@@ -27,5 +27,7 @@ require('lazy').setup({
         require 'plugins.telescope',
         require 'plugins.lsp',
         require 'plugins.autocompletion',
-        require 'plugins.rustaceanvim'
+        require 'plugins.rustaceanvim',
+        require 'plugins.gitsigns',
+        require 'plugins.indent_blanklines'
 })
